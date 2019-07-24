@@ -1,18 +1,20 @@
-.home-page__wrapper{
-    padding: 10px;
-}
+import styled from 'styled-components';
 
-.home-page__button{
+export const PageWrapper = styled.div`
+    padding: 10px;
+`;
+
+export const Button = styled.button`
     padding: 5px 20px;
     margin: 0 5px;
     border-radius: 10px;
     border: none;
     outline: none;
     background-color: #b9b1de;
-}
+`;
 
-.home-page__content{
+export const Input = styled.input`
     border-radius: 20px;
     outline: none;
     text-indent: 5px;
-}
+`;
