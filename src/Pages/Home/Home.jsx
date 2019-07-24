@@ -14,10 +14,10 @@ import {
 class Home extends PureComponent {
     render() {
         return (
-            <PageWrapper className="home-page__wrapper">
-                <Button className="home-page__button" onClick={this.props.increaseCounter}>+</Button>
-                <Button className="home-page__button" onClick={this.props.decreaseCounter}>-</Button>
-                <Input className="home-page__content" value={this.props.counterValue} readOnly/>
+            <PageWrapper>
+                <Button onClick={this.props.increaseCounter}>+</Button>
+                <Button onClick={this.props.decreaseCounter}>-</Button>
+                <Input value={this.props.counterValue} readOnly/>
             </PageWrapper>
         )
     }
