@@ -1,7 +1,7 @@
 import {
   INCREASE_COUNTER,
   DECREASE_COUNTER
-} from '../actions/counter'
+} from '../constants/actions'
 
 const initialState = { value: 0 };
 function counter(state = initialState, action){
