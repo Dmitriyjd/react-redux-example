@@ -6,15 +6,20 @@ import {
     increaseCounter,
     decreaseCounter
 } from '../../store/actions/counter';
+import {
+    PageWrapper,
+    Button,
+    Input
+} from './styles';
 
 class Home extends PureComponent {
     render() {
         return (
-            <div className="home-page__wrapper">
-                <button className="home-page__button" onClick={this.props.increaseCounter}>+</button>
-                <button className="home-page__button" onClick={this.props.decreaseCounter}>-</button>
-                <input className="home-page__content" value={this.props.counterValue} readOnly/>
-            </div>
+            <PageWrapper className="home-page__wrapper">
+                <Button className="home-page__button" onClick={this.props.increaseCounter}>+</Button>
+                <Button className="home-page__button" onClick={this.props.decreaseCounter}>-</Button>
+                <Input className="home-page__content" value={this.props.counterValue} readOnly/>
+            </PageWrapper>
         )
     }
 }
