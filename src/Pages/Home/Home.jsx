@@ -1,6 +1,11 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import './style.css';
+import {
+    increaseCounter,
+    decreaseCounter
+} from '../../store/actions/counter';
 
 class Home extends PureComponent {
     render() {
@@ -14,10 +19,23 @@ class Home extends PureComponent {
     }
 }
 
+const mapStateToProps = state => {
+    return {
+        counterValue: state.counter.value,
+    }
+};
+
+const mapDispatchToProps = dispatch => {
+    return {
+        increaseCounter: () => dispatch(increaseCounter(1)),
+        decreaseCounter: () => dispatch(decreaseCounter(1)),
+    }
+};
+
 Home.propTypes = {
   increaseCounter: PropTypes.func.isRequired,
   decreaseCounter: PropTypes.func.isRequired,
   counterValue: PropTypes.number.isRequired,
 };
 
-export default Home;
+export default connect(mapStateToProps, mapDispatchToProps)(Home);
